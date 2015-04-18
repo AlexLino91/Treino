@@ -1,0 +1,65 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sobre Nós</title>
+	<script type="text/javascript">
+	
+	var turno = "X";
+	function joga(celula){
+		if(document.getElementById(celula).innerHTML == "-"){
+			if(turno == "X"){
+				document.getElementById(celula).innerHTML = "X";
+				turno = "Y";
+			}else{
+				document.getElementById(celula).innerHTML ="O";
+				turno = "X";
+			}
+		}
+	}
+	
+	function fim(){
+		if(document.getElementById("L1C1").innerHTML == "X" && document.getElementById("L1C2").innerHTML == "X"
+			&& document.getElementById("L1C3").innerHTML == "X"){
+				alert("O jogador X ganhou!");
+				reset();
+		}
+	}
+	
+	function reset(){
+		var L, C;
+		for(L=1; L<=3; L++){
+			for(C=1; C<=3; C++){
+				var nomeCelula = "L"+L+"C"+C;
+				document.getElementById(nomeCelula).innerHTML="-";
+			}
+		
+		
+		}
+	}
+	</script>
+	
+</head>
+<body>
+<div onMouseOver="fim();">
+<table border="1">
+
+	<tr>
+		<td id="L1C1" onClick="joga(this.id)">-</td>
+		<td id="L1C2" onClick="joga(this.id)">-</td>
+		<td id="L1C3" onClick="joga(this.id)">-</td>
+	</tr>
+	<tr>
+		<td id="L2C1" onClick="joga(this.id)">-</td>
+		<td id="L2C2" onClick="joga(this.id)">-</td>
+		<td id="L2C3" onClick="joga(this.id)">-</td>
+	</tr>
+	<tr>
+		<td id="L3C1" onClick="joga(this.id)">-</td>
+		<td id="L3C2" onClick="joga(this.id)">-</td>
+		<td id="L3C3" onClick="joga(this.id)">-</td>
+	</tr>
+
+</table>
+</div>
+</body>
+</html>                                        

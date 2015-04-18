@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sobre Nós</title>
+	<script type="text/javascript">
+	
+	function enviarDados(){
+	var nome= document.dados.nome.value
+	var idade= document.dados.idade.value
+	alert("Nome: " +nome+ " Idade: " +idade)
+	}
+	
+	
+	var numero= prompt("Digíte um número: ")
+	
+	switch(numero){
+	case "10":
+	case "5": alert("O número é 5 ou 10"); break;
+	default: alert("O número não é nem 5 nem 10")
+	}
+	
+	for( i=0 ; 1<=10 ; i++ ){
+	document.write(i);
+	}
+	
+	
+	</script>
+	
+</head>
+<body>
+
+<form name="dados" onsubmit="enviarDados()">
+	Nome:<input type="text" name="nome"><br/><br/>
+	Idade:<input type="text" name="idade">
+	<input type="submit" name="enviar" value="Enviar">
+	
+</form>
+</body>
+</html>
